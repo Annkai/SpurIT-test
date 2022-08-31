@@ -1,0 +1,204 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Arial';
+    overflow-x: hidden;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1920px;
+    min-height: 694px;
+    background: #F6F6F6;
+}
+
+.products__title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+.products__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1180px;
+    min-height: 482px;
+}
+
+.products__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
+    height: 482px;
+    color: #2F2F2F;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+
+.card-products__tags {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 263px;
+    height: 25.33px;
+}
+
+.card-products__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px;
+}
+
+.card-products__tag--new {
+    width: 110px;
+    background: #FDCFF3;
+}
+
+.card-products__tag--last {
+    width: 134.41px;
+    background: #FFCF56;
+}
+
+.card-products__inner {
+    height: 195.28px;
+    padding: 2px 24px 0 24px;
+}
+
+.card-products__title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.card-products__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.card-products__button {
+    width: 332px;
+    height: 48px;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    color: #42940F;
+    background: #FFFFFF;
+    border: 2px solid #42940F;
+    border-radius: 8px;
+}
+
+.card-products__button--default {
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.card-products__button--default:hover {
+    color: #FFFFFF;
+    background: #42940F;
+}
+
+.card-products__button--default:active {
+    color: #FFFFFF;
+    background: #1F5200;
+}
+
+.card-products__button--disabled {
+    color: #FFFFFF;
+    background: #4E4E4E;
+    border: 1px solid #4E4E4E;
+}
+
+
+/* Media start */
+
+@media (max-width: 1200px) {
+    .wrapper {
+        align-items: flex-start;
+    }
+    .products__title {
+        font-size: 36px;
+        line-height: 60px;
+    }
+    .products__card {
+        max-width: 380px;
+    }
+    .products__cards {
+        flex-direction: column;
+        max-width: 380px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 390px) {
+    .products__title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .products__card {
+        max-width: 310px;
+    }
+    .card-products__button {
+        width: 262px;
+    }
+}
+
+@media (max-width: 320px) {
+    .products__title {
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .products__card {
+        width: calc(100vw - 10px);
+    }
+    .card-products__tags {
+        gap: 16px;
+        width: auto;
+        flex-wrap: wrap;
+    }
+    .card-products__inner {
+        padding: 0px 6px 0 6px;
+    }
+    .card-products__title {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .card-products__desc {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .card-products__button {
+        width: calc(100vw - 22px);
+    }
+}
+
+
+/* Media end */
