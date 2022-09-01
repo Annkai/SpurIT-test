@@ -1,5 +1,17 @@
 /* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
 
+@font-face {
+    font-family: 'AriaL Black';
+    src: url("fonts/arial-black.ttf");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'AriaL Regular';
+    src: url("fonts/arial-regular.ttf");
+    font-weight: 400;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -11,7 +23,7 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    font-family: 'Arial';
+    font-family: 'Arial Regular';
     overflow-x: hidden;
 }
 
@@ -26,6 +38,7 @@ body {
 
 .products__title {
     text-align: center;
+    font-family: 'AriaL Black';
     font-weight: 900;
     font-size: 48px;
     line-height: 72px;
@@ -88,11 +101,11 @@ body {
 
 .card-products__inner {
     height: 195.28px;
-    padding: 2px 24px 0 24px;
+    padding: 2px 24px 0px 24px;
 }
 
 .card-products__title {
-    font-weight: 900;
+    font-family: 'AriaL Black';
     font-size: 24px;
     line-height: 36px;
 }
